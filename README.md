@@ -180,9 +180,30 @@ the branch `my-new-branch` we don't need to specify which branch we're pushing t
 we'd need to run `git push origin my-new-branch` every time.
 
 ### Making Pull Requests on GitHub
-Open up your browser to the git repository you created earlier, and click on the `Pull Requests`
-tab.
+Open up your browser to the git repository you created earlier, and click on the `branches`
+link just above the file explorer. That will list all of the remote branches. Next to the 
+branch `my-new-branch`, there will be a button called `New pull request`. Click it, and it'll
+bring you to a new page for creating a pull request. In the text box, we can add a description 
+for what we want this pull request to be. I'm just going to say `Demoing creating PRs`.
 
+Then, click the button that says "Create pull request".
+
+This will open up a pull request on the GitHub repository. This is a way for people to see what
+changes someone wants to be adding to the main branch on GitHub with an easy way to compare the 
+code, review the code, approve or reject it, all sorts of things.
+
+For now, we're going to merge the pull request with the main branch. Once we've merged that, 
+we'll see our main branch on GitHub updated to include the new file that we created. 
+
+Back in your command line, run the command 
+
+```
+$ git pull origin main
+```
+And all of the changes from the remote `main` branch will get pulled into your local `main`
+branch and will automatically get merged together. Now, sometimes this merge process fails and 
+we get merge conflicts. We won't go over how to fix merge conflicts today unless we have time at
+the end.
 
 ## Conclusion
 I hope you've learned a lot about how to use git for your team projects! If you learned from
