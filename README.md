@@ -11,7 +11,14 @@ automatically manage the changes so that we can work together on projects.
 GitHub is a hosting service for git repositories. You can post your code on GitHub 
 and using it to collaborate with people on projects.
 
-## Cloning a Repository
+## Working with git solo
+While git is a great tool for working in teams, it's also a nice tool for working on
+projects on your own. GitHub can store all your work so that you don't need to worry
+about backups or anything, and it makes it super easy to share your work with others
+and show people what you've done. This section covers the basic commands you'll need
+to know to get started working on git on your own for school or any personal project
+
+### Cloning a Repository
 To start, we're going to clone this repository. This means we're going to download 
 all of the source code from the repo on GitHub to a local version of it. 
 
@@ -30,7 +37,7 @@ $ rm -rf .git
 **NOTE:** Normally we wouldn't do this when cloning a git repo, but we're going to this time 
 so that you can start a new repo from scratch.
 
-## Initializing a repository
+### Initializing a repository
 To get started with git, we need to initialize our project as a git repository.
 To do this, we're going to run the command `git init`.
 
@@ -40,7 +47,7 @@ about the current directory. Don't worry about it for now.
 Now that our current directory is a git repo, how do we get our changes on to GitHub so that 
 we can work with others on it?
 
-## Staging local changes
+### Staging local changes
 The first thing we're going to do is stage our local changes. What this means is we're going
 to give git a list of files that we've made changes to, and tell git that we'd like to add
 these changes to our staging. 
@@ -52,7 +59,7 @@ $ git add README.md
 And that will add the README.md file to our staged changes. We use these staged changes to 
 prepare all of the stuff that we eventually want to be commited. 
 
-## Commiting staged changes. 
+### Commiting staged changes. 
 Once we have our changes staged, then we can commit them. What this will do, is it will add
 to our git history all of the changes that we made in this set of staged files. Git will 
 be able to keep track of the history of all of our commits so that we can rollback our
@@ -69,7 +76,7 @@ If you want to just write the message on the command line, we can do
 $ git commit -m "My commit message"
 ```
 
-## Getting the changes onto GitHub
+### Getting the changes onto GitHub
 So, before we can push the changes to GitHub, we first need to go onto GitHub and create a 
 remote repository. So open up your browser and log into your GitHub account. In the top-right
 hand corner, there's a little plus. Click that, and the first option in the dropdown is to 
@@ -104,7 +111,6 @@ to work with git and GitHub. However, we use git to work in teams and work on bi
 collaboratively. To be able to do that effectively, we'll need to know a bit more. 
 
 ---
-
 
 ## Conclusion
 I hope you've learned a lot about how to use git for your team projects! If you learned from
