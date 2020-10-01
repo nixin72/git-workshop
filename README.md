@@ -106,3 +106,142 @@ collaboratively. To be able to do that effectively, we'll need to know a bit mor
 ---
 
 
+## Conclusion
+I hope you've learned a lot about how to use git for your team projects! If you learned from
+the workshop, let me know on Discord. If not, write an issue on the GitHub repo for this and
+let me know what I can improve. 
+
+## Appendix
+Here's all the commands that we learned to use in this tutorial:
+
+### git clone
+#### Example
+```
+$ git clone https://github.com/username/repo-name.git
+```
+#### Description
+Will clone a remote git repository to a local directory
+
+### git init
+#### Example
+```
+$ git init
+```
+#### Description
+Will initialize the current directory as a new git repo. If it's already a git repo, it'll fail.
+
+### git add
+#### Example
+```
+$ git add filename.txt
+$ git add -p filename.txt
+```
+#### Description
+Will stage all the changes in that file to be commited.
+With the `-p` flag supplied, you can pick only the changes you want to be commited.
+
+### git commit
+#### Example
+```
+$ git commit -m "my commit message"
+```
+#### Description
+Will add all the changes staged to a "commit" so that we can use that as kind of a checkpoint 
+or rollback point in our git history.
+
+### git push
+#### Example
+```
+$ git push -u origin master
+```
+#### Description
+Will push all of our commited changes on the current branch to the remote branch.
+
+### git pull
+#### Example
+```
+$ git pull origin master
+```
+#### Description
+Will pull all of the changes in the remote repository into our local repository on the current
+branch. If there's merge errors, you'll need to fix them.
+
+### git fetch
+#### Example
+```
+$ git fetch origin
+```
+#### Description
+Will allow you to fetch all the objects on the remote branch and bring them into your local.
+
+### git status
+#### Example
+```
+$ git status
+```
+#### Description
+Will show you all of the changes that have been made locally up to this point that haven't been
+commited. Will show you all files created/modified/deleted, staged changes, etc.
+
+### git diff
+#### Example
+```
+$ git diff filename.txt
+```
+#### Description
+Will show you all the differences in `filename.txt` between the current local changes and what 
+the file looked like in the most recent commit.
+
+### git checkout
+#### Example
+```
+$ git checkout master
+$ git checkout -b my-new-branch-name
+```
+#### Description
+Will checkout a branch and change all of your local files to the most recent commit on that branch.
+If the -b flag is supplied, it'll create the new branch will all your current changes.
+
+### git branch
+#### Example
+```
+$ git branch -l
+$ git branch -d branch-name
+```
+#### Description
+Will allow you to list all branches or delete a specified branch
+
+### git stash
+#### Example
+```
+$ git stash
+$ git stash pop
+$ git stash clear
+```
+#### Description
+Allows you to stash changes quickly if you want to change branches or check something out 
+without adding those changes to a commit. 
+Adding the `pop` subcommand will pop all of the changes out of the stash and apply them
+against your current files. 
+Adding the `clear` subcommand will clear the stash of all the changes that have been added
+to it.
+
+### git remote
+#### Example
+```
+$ git remote add origin https://github.com/username/repo-name.git
+$ git remote remove origin
+```
+#### Description
+Adds or removes remote repositories that you can use to collaborate with people. 
+Can have multiple remote repositories so you can do things like push to either GitHub or
+Heroku.
+
+### git reset
+#### Example
+```
+$ git reset HEAD~1
+```
+#### Description
+Allows you to undo things that you messed up. The example above will undo the most 
+recent commit if you did something you didn't want to do.
