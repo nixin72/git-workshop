@@ -205,6 +205,44 @@ branch and will automatically get merged together. Now, sometimes this merge pro
 we get merge conflicts. We won't go over how to fix merge conflicts today unless we have time at
 the end.
 
+### GitHub issues
+Another important tool of GitHub is the issues. We can use issues to document our project 
+development. Do things like create bug reports, track the addition of new features, ask 
+questions about a project, etc. When using open source software and you find a bug in it, 
+it's very common to open up the issues for it's GitHub repository and see if other people have
+noticed the same bug and how they fixed it. Or if no one has encountered it, then you can 
+submit bug reports through here. It's very common to use these in projects as a way to 
+communicate and collaborate.
+
+### Gitignore
+A lot of the time, you're going to want git to ignore certain files. Let's create a new Java class
+call Example.java.
+
+```java
+class Example {
+	public static void main(String[] args) {
+        System.out.println("Hello world");
+	}
+}
+```
+If we want to run this file, then we go into the command line and do `javac Example.java` to
+compile it. Then to run it, we do `java Example`. If we look at the contents of our 
+directory now, we have an `Example.class` file. This is a generated file, and not one that's 
+useful to people looking at the source code for our project. So what we want is for our `.class`
+files to never be added to git. To do this, we can create a special file `.gitignore`.
+
+This is what it'll look like:
+```
+*.class
+```
+What this does is it tells Git that whenever it sees a `.class` file, it simply ignores it. So 
+we won't be uploading these files to GitHub at all.
+
+Other things we'd generally put in a gitignore file are things like libraries. If we had a 
+JavaScript project, then we'd add our `node_modules` directory to our gitignore. We can also
+use our gitignore to not commit files that have potentitally sensitive information, like 
+environment variables with information for a database.
+
 ## Conclusion
 I hope you've learned a lot about how to use git for your team projects! If you learned from
 the workshop, let me know on Discord. If not, write an issue on the GitHub repo for this and
