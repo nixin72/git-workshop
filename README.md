@@ -98,10 +98,10 @@ want to push to our remote repo. So now that we have our remote added, we can ru
 command 
 
 ```
-$ git push origin master
+$ git push origin main
 ```
 
-And this will take all the local changes we've made, and push them to the master branch at 
+And this will take all the local changes we've made, and push them to the main branch at 
 that remote repository that we have on GitHub.
 
 ---
@@ -118,10 +118,10 @@ collegues on projects. In this section, we're going to cover the commands necess
 to use git for school.
 
 ### Git branches
-When working in git, if everything is always pushed to master, then there's no guarantee 
-that what's in master is functional or has been tested or anything really. Using branches, 
+When working in git, if everything is always pushed to main, then there's no guarantee 
+that what's in main is functional or has been tested or anything really. Using branches, 
 we can isolate our work so that when we make changes, we're not risking breaking anything 
-that's on the master branch.
+that's on the main branch.
 
 Let's create a new branch to isolate some changes that we're going to make.
 ```
@@ -297,7 +297,7 @@ or rollback point in our git history.
 ### git push
 #### Example
 ```
-$ git push -u origin master
+$ git push -u origin main
 ```
 #### Description
 Will push all of our commited changes on the current branch to the remote branch.
@@ -307,7 +307,7 @@ Will push all of our commited changes on the current branch to the remote branch
 ### git pull
 #### Example
 ```
-$ git pull origin master
+$ git pull origin main
 ```
 #### Description
 Will pull all of the changes in the remote repository into our local repository on the current
@@ -350,7 +350,7 @@ the file looked like in the most recent commit.
 ### git checkout
 #### Example
 ```
-$ git checkout master
+$ git checkout main
 $ git checkout -b my-new-branch-name
 ```
 #### Description
