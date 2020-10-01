@@ -112,6 +112,78 @@ collaboratively. To be able to do that effectively, we'll need to know a bit mor
 
 ---
 
+## Collaborating with git and GitHub
+Git really shines when you're able to use it to collaborate with teammates, friends or 
+collegues on projects. In this section, we're going to cover the commands necessary to be able
+to use git for school.
+
+### Git branches
+When working in git, if everything is always pushed to master, then there's no guarantee 
+that what's in master is functional or has been tested or anything really. Using branches, 
+we can isolate our work so that when we make changes, we're not risking breaking anything 
+that's on the master branch.
+
+Let's create a new branch to isolate some changes that we're going to make.
+```
+$ git branch my-new-branch
+```
+This will create a new branch in your local git repository so that you can use it to make 
+all of your changes. However, creating a branch won't move you onto it. We can use 
+
+```
+$ git checkout my-new-branch
+```
+To start using that new branch that we just created. 
+We can alternatively do 
+
+```
+$ git checkout -b my-new-branch
+```
+To create a new branch and switch to it. Once you're on your new branch, create a file and 
+add some stuff to it. Doesn't matter what it is. 
+This is my new file:
+```
+This is my new file. 
+It has 2 lines.
+```
+
+Now that we've added this new file, we want to add it to git.
+
+#### Checking our changes
+One thing that's very helpful to do before we stage our changes is to see *what*
+we've actually changed. Sometimes when you've been working for a while you can change 
+many different files in many different places. Often all these changes are unrelated, 
+and so you'll want to add them to different commits. We can use the `git status` command
+to see all the files that we've changes.
+
+```
+$ git status
+```
+Once we've seen all the files that are different, we can add them one by one, and give 
+unique commit messages, or add multiple files under a single commit, so that we can 
+preserve our git history to make it easier to rollback.
+
+Once we know what we want to be adding to our staging area, we can run the same 
+```
+$ git add filename.txt
+```
+as before, and then we can commit it.
+```
+$ git commit -m "I added my test file."
+```
+Then we'll push it to our new branch:
+```
+$ git push -u origin my-new-branch
+```
+This `-u` is a little different than before. This will make it so that as long as we're on 
+the branch `my-new-branch` we don't need to specify which branch we're pushing to. Without it, 
+we'd need to run `git push origin my-new-branch` every time.
+
+### Making Pull Requests on GitHub
+Open up your browser to the git repository you created earlier, and click on the `Pull Requests`
+tab.
+
+
 ## Conclusion
 I hope you've learned a lot about how to use git for your team projects! If you learned from
 the workshop, let me know on Discord. If not, write an issue on the GitHub repo for this and
